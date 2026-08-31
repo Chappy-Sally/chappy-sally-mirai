@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>
+    STEP1｜未来の私に会いにいくナビ
+  </title>
+
+  <meta
+    name="description"
+    content="これからどんな気持ちで過ごしたいかを、やさしく選んでみるページです。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <main class="content-card">
+
+      <!-- ステップ表示 -->
+      <section class="step-header">
+
+        <p class="mini-label">
+          🌈 STEP 1 / 10
+        </p>
+
+        <h1>
+          これから、<br>
+          どんな気持ちで過ごしたい？
+        </h1>
+
+        <p class="hero-message">
+          「何を叶えたい？」の前に、<br>
+          まずは
+          <strong>どんな気持ちで毎日を過ごしたいか</strong>
+          を見てみよう😊
+        </p>
+
+      </section>
+
+
+      <!-- 質問 -->
+      <section class="question-section">
+
+        <div class="question-box">
+
+          <p class="question-lead">
+            今のあなたが
+            「こんな気持ちで過ごせたらいいな🤭」
+            と思うものを選んでね。
+          </p>
+
+          <p class="question-note">
+            複数選んでOKです🌿
+          </p>
+
+
+          <div class="choice-list">
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="安心していたい"
+              >
+              <span>
+                🌿 安心していたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="自由でいたい"
+              >
+              <span>
+                🕊️ 自由でいたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="楽しみたい"
+              >
+              <span>
+                😆 楽しみたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="のんびりしたい"
+              >
+              <span>
+                ☕ のんびりしたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="ワクワクしたい"
+              >
+              <span>
+                🌈 ワクワクしたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="豊かさを感じたい"
+              >
+              <span>
+                ✨ 豊かさを感じたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="人とのつながりを感じたい"
+              >
+              <span>
+                💕 人とのつながりを感じたい
+              </span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="feeling"
+                value="自分らしくいたい"
+              >
+              <span>
+                🌸 自分らしくいたい
+              </span>
+            </label>
+
+          </div>
+
+
+          <!-- その他 -->
+          <div class="other-box">
+
+            <label for="otherFeeling">
+              その他に浮かぶ気持ちがあったら、
+              自由に書いてね😊
+            </label>
+
+            <textarea
+              id="otherFeeling"
+              rows="4"
+              placeholder="例：穏やかでいたい、軽やかでいたい など"
+            ></textarea>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- やさしい補足 -->
+      <section class="note-section">
+
+        <div class="note-box">
+
+          <p>
+            「こう感じなきゃ」ではなくて大丈夫🌿
+          </p>
+
+          <p>
+            今のあなたが
+            <strong>
+              「これ、いいなぁ🤭」
+            </strong>
+            と思うものを選ぶだけでOKです。
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ボタン -->
+      <section class="navigation-section">
+
+        <a
+          href="index.html"
+          class="sub-button"
+        >
+          ← 表紙にもどる
+        </a>
+
+        <button
+          type="button"
+          class="main-button"
+          id="nextButton"
+        >
+          次へ進む 🌈
+        </button>
+
+      </section>
+
+
+      <!-- フッター -->
+      <section class="ending-section">
+
+        <div class="ending-box">
+          <p>
+            未来を決めるんじゃなくて、<br>
+            今の私が心地よい方向を
+            ちょっと見つけてみよう😊
+          </p>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script>
+
+    const nextButton =
+      document.getElementById("nextButton");
+
+    nextButton.addEventListener(
+      "click",
+      function () {
+
+        const checked =
+          document.querySelectorAll(
+            'input[name="feeling"]:checked'
+          );
+
+        const selectedFeelings =
+          Array.from(checked).map(
+            item => item.value
+          );
+
+        const otherFeeling =
+          document
+            .getElementById("otherFeeling")
+            .value
+            .trim();
+
+
+        const step1Data = {
+          selectedFeelings:
+            selectedFeelings,
+          otherFeeling:
+            otherFeeling
+        };
+
+
+        localStorage.setItem(
+          "mirai_step1",
+          JSON.stringify(step1Data)
+        );
+
+
+        window.location.href =
+          "step2.html";
+      }
+    );
+
+
+    /* 保存済み回答を復元 */
+
+    const savedData =
+      localStorage.getItem(
+        "mirai_step1"
+      );
+
+    if (savedData) {
+
+      const data =
+        JSON.parse(savedData);
+
+
+      if (data.selectedFeelings) {
+
+        data.selectedFeelings.forEach(
+          function (value) {
+
+            const checkbox =
+              document.querySelector(
+                'input[name="feeling"][value="' +
+                value +
+                '"]'
+              );
+
+            if (checkbox) {
+              checkbox.checked = true;
+            }
+
+          }
+        );
+
+      }
+
+
+      if (data.otherFeeling) {
+
+        document.getElementById(
+          "otherFeeling"
+        ).value =
+          data.otherFeeling;
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
