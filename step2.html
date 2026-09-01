@@ -115,6 +115,27 @@
                 <span>バタバタせずのんびりしている</span>
               </label>
 
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="morning"
+                  value="それ以外"
+                >
+                <span>それ以外</span>
+              </label>
+
+            </div>
+
+            <div class="other-box small-other-box">
+              <label for="morningOther">
+                ほかにあったら書いてね😊
+              </label>
+
+              <input
+                type="text"
+                id="morningOther"
+                placeholder="例：朝から散歩している"
+              >
             </div>
 
           </div>
@@ -174,6 +195,27 @@
                 <span>ひとり時間も楽しんでいる</span>
               </label>
 
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="withWho"
+                  value="それ以外"
+                >
+                <span>それ以外</span>
+              </label>
+
+            </div>
+
+            <div class="other-box small-other-box">
+              <label for="withWhoOther">
+                ほかにあったら書いてね😊
+              </label>
+
+              <input
+                type="text"
+                id="withWhoOther"
+                placeholder="例：仲間と一緒に過ごしている"
+              >
             </div>
 
           </div>
@@ -233,6 +275,27 @@
                 <span>落ち着ける静かな場所</span>
               </label>
 
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="place"
+                  value="それ以外"
+                >
+                <span>それ以外</span>
+              </label>
+
+            </div>
+
+            <div class="other-box small-other-box">
+              <label for="placeOther">
+                ほかにあったら書いてね😊
+              </label>
+
+              <input
+                type="text"
+                id="placeOther"
+                placeholder="例：海の近く、海外、富士山が見える場所 など"
+              >
             </div>
 
           </div>
@@ -310,23 +373,43 @@
                 <span>自分のペースで過ごしている</span>
               </label>
 
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="それ以外"
+                >
+                <span>それ以外</span>
+              </label>
+
+            </div>
+
+            <div class="other-box small-other-box">
+              <label for="doingOther">
+                ほかにあったら書いてね😊
+              </label>
+
+              <input
+                type="text"
+                id="doingOther"
+                placeholder="例：庭いじり、読書、習いごと など"
+              >
             </div>
 
           </div>
 
 
-          <!-- 自由入力 -->
-          <div class="other-box">
+          <!-- 最後の自由入力 -->
+          <div class="other-box final-future-box">
 
             <label for="futureDay">
               ✨ こんな1日だったらいいなぁ😊
-              があったら、ちょこっと書いてみよう
             </label>
 
             <textarea
               id="futureDay"
               rows="5"
-              placeholder="例：朝はゆっくりお茶を飲んで、好きなことをしながらのんびり過ごしたい"
+              placeholder="浮かんだことがあったら、自由に書いてみてね"
             ></textarea>
 
           </div>
@@ -399,6 +482,7 @@
   <script>
 
     function getCheckedValues(name) {
+
       const checked =
         document.querySelectorAll(
           'input[name="' + name + '"]:checked'
@@ -407,6 +491,7 @@
       return Array.from(checked).map(
         item => item.value
       );
+
     }
 
 
@@ -423,14 +508,38 @@
           morning:
             getCheckedValues("morning"),
 
+          morningOther:
+            document
+              .getElementById("morningOther")
+              .value
+              .trim(),
+
           withWho:
             getCheckedValues("withWho"),
+
+          withWhoOther:
+            document
+              .getElementById("withWhoOther")
+              .value
+              .trim(),
 
           place:
             getCheckedValues("place"),
 
+          placeOther:
+            document
+              .getElementById("placeOther")
+              .value
+              .trim(),
+
           doing:
             getCheckedValues("doing"),
+
+          doingOther:
+            document
+              .getElementById("doingOther")
+              .value
+              .trim(),
 
           futureDay:
             document
@@ -449,6 +558,7 @@
 
         window.location.href =
           "step3.html";
+
       }
     );
 
@@ -519,6 +629,30 @@
         "doing",
         data.doing
       );
+
+
+      document.getElementById(
+        "morningOther"
+      ).value =
+        data.morningOther || "";
+
+
+      document.getElementById(
+        "withWhoOther"
+      ).value =
+        data.withWhoOther || "";
+
+
+      document.getElementById(
+        "placeOther"
+      ).value =
+        data.placeOther || "";
+
+
+      document.getElementById(
+        "doingOther"
+      ).value =
+        data.doingOther || "";
 
 
       document.getElementById(
