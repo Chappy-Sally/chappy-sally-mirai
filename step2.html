@@ -14,7 +14,7 @@
 
   <meta
     name="description"
-    content="こんな毎日になったら何をしているか、未来の暮らしをやさしく思い浮かべるページです。"
+    content="未来の毎日を、ポチポチ選びながらやさしく思い浮かべるページです。"
   >
 
   <link rel="stylesheet" href="style.css">
@@ -35,7 +35,7 @@
 
         <h1>
           そんな毎日になったら、<br>
-          何してる？
+          どんなふうに過ごしてる？
         </h1>
 
         <p class="hero-message">
@@ -52,122 +52,281 @@
         <div class="question-box">
 
           <p class="question-lead">
-            未来をきっちり決めなくて大丈夫🌿
+            「これ、いいなぁ🤭」と思うものを
+            ポチポチ選んでみてね。
           </p>
 
           <p class="question-note">
-            浮かんだところだけ、自由に書いてみてね。<br>
-            全部答えなくてもOKです😊
+            複数選んでOKです🌿
           </p>
 
 
           <!-- 朝 -->
-          <div class="future-input-box">
+          <div class="choice-group">
 
-            <label for="morning">
-              ☀️ 朝はどんなふうに起きてる？
-            </label>
+            <h2 class="choice-group-title">
+              ☀️ 朝はどんなふうに過ごしてる？
+            </h2>
 
-            <textarea
-              id="morning"
-              rows="4"
-              placeholder="例：ゆっくり起きて、窓を開けてお茶を飲んでいる"
-            ></textarea>
+            <div class="choice-list">
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="morning"
+                  value="ゆっくり起きている"
+                >
+                <span>ゆっくり起きている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="morning"
+                  value="好きな時間に起きている"
+                >
+                <span>好きな時間に起きている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="morning"
+                  value="朝日を浴びている"
+                >
+                <span>朝日を浴びている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="morning"
+                  value="お茶やコーヒーを楽しんでいる"
+                >
+                <span>お茶やコーヒーを楽しんでいる</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="morning"
+                  value="バタバタせずのんびりしている"
+                >
+                <span>バタバタせずのんびりしている</span>
+              </label>
+
+            </div>
 
           </div>
 
 
           <!-- 誰と -->
-          <div class="future-input-box">
+          <div class="choice-group">
 
-            <label for="withWho">
+            <h2 class="choice-group-title">
               💕 誰と過ごしてる？
-            </label>
+            </h2>
 
-            <textarea
-              id="withWho"
-              rows="4"
-              placeholder="例：家族、パートナー、友人、ひとりでのんびり など"
-            ></textarea>
+            <div class="choice-list">
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="withWho"
+                  value="家族と過ごしている"
+                >
+                <span>家族と過ごしている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="withWho"
+                  value="パートナーと過ごしている"
+                >
+                <span>パートナーと過ごしている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="withWho"
+                  value="友人と楽しく過ごしている"
+                >
+                <span>友人と楽しく過ごしている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="withWho"
+                  value="ペットと過ごしている"
+                >
+                <span>ペットと過ごしている</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="withWho"
+                  value="ひとり時間も楽しんでいる"
+                >
+                <span>ひとり時間も楽しんでいる</span>
+              </label>
+
+            </div>
 
           </div>
 
 
           <!-- どこ -->
-          <div class="future-input-box">
+          <div class="choice-group">
 
-            <label for="place">
+            <h2 class="choice-group-title">
               🏡 どこで過ごしてる？
-            </label>
+            </h2>
 
-            <textarea
-              id="place"
-              rows="4"
-              placeholder="例：明るい家、自然の近く、好きな街 など"
-            ></textarea>
+            <div class="choice-list">
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="place"
+                  value="明るくて心地よい家"
+                >
+                <span>明るくて心地よい家</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="place"
+                  value="自然を感じられる場所"
+                >
+                <span>自然を感じられる場所</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="place"
+                  value="好きな街"
+                >
+                <span>好きな街</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="place"
+                  value="空がよく見える場所"
+                >
+                <span>空がよく見える場所</span>
+              </label>
+
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="place"
+                  value="落ち着ける静かな場所"
+                >
+                <span>落ち着ける静かな場所</span>
+              </label>
+
+            </div>
 
           </div>
 
 
           <!-- 何をしている -->
-          <div class="future-input-box">
+          <div class="choice-group">
 
-            <label for="doing">
+            <h2 class="choice-group-title">
               🌈 何をしてる？
-            </label>
+            </h2>
 
-            <textarea
-              id="doing"
-              rows="4"
-              placeholder="例：好きな仕事をしている、作品を作っている、旅行している など"
-            ></textarea>
+            <div class="choice-list">
 
-          </div>
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="好きな仕事や活動をしている"
+                >
+                <span>好きな仕事や活動をしている</span>
+              </label>
 
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="好きなものを作っている"
+                >
+                <span>好きなものを作っている</span>
+              </label>
 
-          <!-- 時間 -->
-          <div class="future-input-box">
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="旅行やお出かけを楽しんでいる"
+                >
+                <span>旅行やお出かけを楽しんでいる</span>
+              </label>
 
-            <label for="timeUse">
-              ⏰ 時間はどんなふうに使ってる？
-            </label>
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="のんびり過ごしている"
+                >
+                <span>のんびり過ごしている</span>
+              </label>
 
-            <textarea
-              id="timeUse"
-              rows="4"
-              placeholder="例：急がず、自分のペースで好きなことに時間を使っている"
-            ></textarea>
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="人と楽しく話している"
+                >
+                <span>人と楽しく話している</span>
+              </label>
 
-          </div>
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="新しいことを楽しんでいる"
+                >
+                <span>新しいことを楽しんでいる</span>
+              </label>
 
+              <label class="choice-item">
+                <input
+                  type="checkbox"
+                  name="doing"
+                  value="自分のペースで過ごしている"
+                >
+                <span>自分のペースで過ごしている</span>
+              </label>
 
-          <!-- お金 -->
-          <div class="future-input-box">
-
-            <label for="moneyUse">
-              ✨ お金はどんなふうに使ってる？
-            </label>
-
-            <textarea
-              id="moneyUse"
-              rows="4"
-              placeholder="例：安心して必要なものを買ったり、旅行や楽しみに使っている"
-            ></textarea>
+            </div>
 
           </div>
 
 
           <!-- 自由入力 -->
-          <div class="future-input-box">
+          <div class="other-box">
 
-            <label for="otherFuture">
-              🌸 ほかに浮かんだことがあったら自由にどうぞ
+            <label for="futureDay">
+              ✨ こんな1日だったらいいなぁ😊
+              があったら、ちょこっと書いてみよう
             </label>
 
             <textarea
-              id="otherFuture"
+              id="futureDay"
               rows="5"
-              placeholder="どんな小さなことでもOKです😊"
+              placeholder="例：朝はゆっくりお茶を飲んで、好きなことをしながらのんびり過ごしたい"
             ></textarea>
 
           </div>
@@ -177,21 +336,21 @@
       </section>
 
 
-      <!-- やさしい補足 -->
+      <!-- 補足 -->
       <section class="note-section">
 
         <div class="note-box">
 
           <p>
-            「こんなの無理かも」は、いったん横に置いて大丈夫🌿
+            ぜんぶ決めなくて大丈夫🌿
           </p>
 
           <p>
             今はただ、
             <strong>
-              「こんな毎日だったらいいなぁ🤭」
+              「こんな毎日、いいなぁ🤭」
             </strong>
-            を眺めてみよう。
+            を集めてみよう。
           </p>
 
         </div>
@@ -225,9 +384,8 @@
 
         <div class="ending-box">
           <p>
-            未来は正解を当てるものじゃなくて、<br>
-            今の私が「いいな😊」と思う景色を
-            見つけていくもの。
+            「どうやって叶える？」はまだ考えなくてOK😊<br>
+            まずは、好きな未来を見つけていこう🌈
           </p>
         </div>
 
@@ -240,34 +398,46 @@
 
   <script>
 
+    function getCheckedValues(name) {
+      const checked =
+        document.querySelectorAll(
+          'input[name="' + name + '"]:checked'
+        );
+
+      return Array.from(checked).map(
+        item => item.value
+      );
+    }
+
+
     const nextButton =
       document.getElementById("nextButton");
+
 
     nextButton.addEventListener(
       "click",
       function () {
 
         const step2Data = {
+
           morning:
-            document.getElementById("morning").value.trim(),
+            getCheckedValues("morning"),
 
           withWho:
-            document.getElementById("withWho").value.trim(),
+            getCheckedValues("withWho"),
 
           place:
-            document.getElementById("place").value.trim(),
+            getCheckedValues("place"),
 
           doing:
-            document.getElementById("doing").value.trim(),
+            getCheckedValues("doing"),
 
-          timeUse:
-            document.getElementById("timeUse").value.trim(),
+          futureDay:
+            document
+              .getElementById("futureDay")
+              .value
+              .trim()
 
-          moneyUse:
-            document.getElementById("moneyUse").value.trim(),
-
-          otherFuture:
-            document.getElementById("otherFuture").value.trim()
         };
 
 
@@ -283,12 +453,13 @@
     );
 
 
-    /* 保存済み回答を復元 */
+    /* ===== 保存済み回答を復元 ===== */
 
     const savedData =
       localStorage.getItem(
         "mirai_step2"
       );
+
 
     if (savedData) {
 
@@ -296,26 +467,64 @@
         JSON.parse(savedData);
 
 
-      document.getElementById("morning").value =
-        data.morning || "";
+      function restoreCheckboxes(
+        name,
+        values
+      ) {
 
-      document.getElementById("withWho").value =
-        data.withWho || "";
+        if (!Array.isArray(values)) {
+          return;
+        }
 
-      document.getElementById("place").value =
-        data.place || "";
 
-      document.getElementById("doing").value =
-        data.doing || "";
+        values.forEach(
+          function (value) {
 
-      document.getElementById("timeUse").value =
-        data.timeUse || "";
+            const checkbox =
+              document.querySelector(
+                'input[name="' +
+                name +
+                '"][value="' +
+                value +
+                '"]'
+              );
 
-      document.getElementById("moneyUse").value =
-        data.moneyUse || "";
 
-      document.getElementById("otherFuture").value =
-        data.otherFuture || "";
+            if (checkbox) {
+              checkbox.checked = true;
+            }
+
+          }
+        );
+
+      }
+
+
+      restoreCheckboxes(
+        "morning",
+        data.morning
+      );
+
+      restoreCheckboxes(
+        "withWho",
+        data.withWho
+      );
+
+      restoreCheckboxes(
+        "place",
+        data.place
+      );
+
+      restoreCheckboxes(
+        "doing",
+        data.doing
+      );
+
+
+      document.getElementById(
+        "futureDay"
+      ).value =
+        data.futureDay || "";
 
     }
 
