@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>
+    STEP2｜未来の私に会いにいくナビ
+  </title>
+
+  <meta
+    name="description"
+    content="こんな毎日になったら何をしているか、未来の暮らしをやさしく思い浮かべるページです。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <main class="content-card">
+
+      <!-- ステップ表示 -->
+      <section class="step-header">
+
+        <p class="mini-label">
+          🌈 STEP 2 / 10
+        </p>
+
+        <h1>
+          そんな毎日になったら、<br>
+          何してる？
+        </h1>
+
+        <p class="hero-message">
+          STEP1で選んだ気持ちで過ごせているとしたら、<br>
+          どんな毎日になっているかな？😊
+        </p>
+
+      </section>
+
+
+      <!-- 質問 -->
+      <section class="question-section">
+
+        <div class="question-box">
+
+          <p class="question-lead">
+            未来をきっちり決めなくて大丈夫🌿
+          </p>
+
+          <p class="question-note">
+            浮かんだところだけ、自由に書いてみてね。<br>
+            全部答えなくてもOKです😊
+          </p>
+
+
+          <!-- 朝 -->
+          <div class="future-input-box">
+
+            <label for="morning">
+              ☀️ 朝はどんなふうに起きてる？
+            </label>
+
+            <textarea
+              id="morning"
+              rows="4"
+              placeholder="例：ゆっくり起きて、窓を開けてお茶を飲んでいる"
+            ></textarea>
+
+          </div>
+
+
+          <!-- 誰と -->
+          <div class="future-input-box">
+
+            <label for="withWho">
+              💕 誰と過ごしてる？
+            </label>
+
+            <textarea
+              id="withWho"
+              rows="4"
+              placeholder="例：家族、パートナー、友人、ひとりでのんびり など"
+            ></textarea>
+
+          </div>
+
+
+          <!-- どこ -->
+          <div class="future-input-box">
+
+            <label for="place">
+              🏡 どこで過ごしてる？
+            </label>
+
+            <textarea
+              id="place"
+              rows="4"
+              placeholder="例：明るい家、自然の近く、好きな街 など"
+            ></textarea>
+
+          </div>
+
+
+          <!-- 何をしている -->
+          <div class="future-input-box">
+
+            <label for="doing">
+              🌈 何をしてる？
+            </label>
+
+            <textarea
+              id="doing"
+              rows="4"
+              placeholder="例：好きな仕事をしている、作品を作っている、旅行している など"
+            ></textarea>
+
+          </div>
+
+
+          <!-- 時間 -->
+          <div class="future-input-box">
+
+            <label for="timeUse">
+              ⏰ 時間はどんなふうに使ってる？
+            </label>
+
+            <textarea
+              id="timeUse"
+              rows="4"
+              placeholder="例：急がず、自分のペースで好きなことに時間を使っている"
+            ></textarea>
+
+          </div>
+
+
+          <!-- お金 -->
+          <div class="future-input-box">
+
+            <label for="moneyUse">
+              ✨ お金はどんなふうに使ってる？
+            </label>
+
+            <textarea
+              id="moneyUse"
+              rows="4"
+              placeholder="例：安心して必要なものを買ったり、旅行や楽しみに使っている"
+            ></textarea>
+
+          </div>
+
+
+          <!-- 自由入力 -->
+          <div class="future-input-box">
+
+            <label for="otherFuture">
+              🌸 ほかに浮かんだことがあったら自由にどうぞ
+            </label>
+
+            <textarea
+              id="otherFuture"
+              rows="5"
+              placeholder="どんな小さなことでもOKです😊"
+            ></textarea>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- やさしい補足 -->
+      <section class="note-section">
+
+        <div class="note-box">
+
+          <p>
+            「こんなの無理かも」は、いったん横に置いて大丈夫🌿
+          </p>
+
+          <p>
+            今はただ、
+            <strong>
+              「こんな毎日だったらいいなぁ🤭」
+            </strong>
+            を眺めてみよう。
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ボタン -->
+      <section class="navigation-section">
+
+        <a
+          href="step1.html"
+          class="sub-button"
+        >
+          ← STEP1にもどる
+        </a>
+
+        <button
+          type="button"
+          class="main-button"
+          id="nextButton"
+        >
+          次へ進む 🌈
+        </button>
+
+      </section>
+
+
+      <!-- フッター -->
+      <section class="ending-section">
+
+        <div class="ending-box">
+          <p>
+            未来は正解を当てるものじゃなくて、<br>
+            今の私が「いいな😊」と思う景色を
+            見つけていくもの。
+          </p>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script>
+
+    const nextButton =
+      document.getElementById("nextButton");
+
+    nextButton.addEventListener(
+      "click",
+      function () {
+
+        const step2Data = {
+          morning:
+            document.getElementById("morning").value.trim(),
+
+          withWho:
+            document.getElementById("withWho").value.trim(),
+
+          place:
+            document.getElementById("place").value.trim(),
+
+          doing:
+            document.getElementById("doing").value.trim(),
+
+          timeUse:
+            document.getElementById("timeUse").value.trim(),
+
+          moneyUse:
+            document.getElementById("moneyUse").value.trim(),
+
+          otherFuture:
+            document.getElementById("otherFuture").value.trim()
+        };
+
+
+        localStorage.setItem(
+          "mirai_step2",
+          JSON.stringify(step2Data)
+        );
+
+
+        window.location.href =
+          "step3.html";
+      }
+    );
+
+
+    /* 保存済み回答を復元 */
+
+    const savedData =
+      localStorage.getItem(
+        "mirai_step2"
+      );
+
+    if (savedData) {
+
+      const data =
+        JSON.parse(savedData);
+
+
+      document.getElementById("morning").value =
+        data.morning || "";
+
+      document.getElementById("withWho").value =
+        data.withWho || "";
+
+      document.getElementById("place").value =
+        data.place || "";
+
+      document.getElementById("doing").value =
+        data.doing || "";
+
+      document.getElementById("timeUse").value =
+        data.timeUse || "";
+
+      document.getElementById("moneyUse").value =
+        data.moneyUse || "";
+
+      document.getElementById("otherFuture").value =
+        data.otherFuture || "";
+
+    }
+
+  </script>
+
+</body>
+</html>
