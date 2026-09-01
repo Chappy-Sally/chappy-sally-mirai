@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>
+    STEP3｜未来の私に会いにいくナビ
+  </title>
+
+  <meta
+    name="description"
+    content="これからちょっとやってみたいことを、ポチポチ選びながら見つけるページです。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <main class="content-card">
+
+      <!-- ステップ表示 -->
+      <section class="step-header">
+
+        <p class="mini-label">
+          🌈 STEP 3 / 10
+        </p>
+
+        <h1>
+          ちょっとやってみたいこと、<br>
+          ある？
+        </h1>
+
+        <p class="hero-message">
+          「絶対やる！」じゃなくて大丈夫😊<br>
+          <strong>ちょっと気になる🤭</strong>
+          くらいで選んでみよう。
+        </p>
+
+      </section>
+
+
+      <!-- 質問 -->
+      <section class="question-section">
+
+        <div class="question-box">
+
+          <p class="question-lead">
+            「これ、やってみたいかも🌿」
+            と思うものをポチポチしてね。
+          </p>
+
+          <p class="question-note">
+            複数選んでOKです😊
+          </p>
+
+
+          <div class="choice-list">
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="行ってみたい場所がある"
+              >
+              <span>✈️ 行ってみたい場所がある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="やってみたい仕事や活動がある"
+              >
+              <span>💼 やってみたい仕事や活動がある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="作ってみたいものがある"
+              >
+              <span>🎨 作ってみたいものがある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="会ってみたい人がいる"
+              >
+              <span>💕 会ってみたい人がいる</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="暮らしてみたい場所がある"
+              >
+              <span>🏡 暮らしてみたい場所がある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="欲しいものがある"
+              >
+              <span>🎁 欲しいものがある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="誰かとやってみたいことがある"
+              >
+              <span>🌈 誰かとやってみたいことがある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="学んでみたいことがある"
+              >
+              <span>📚 学んでみたいことがある</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="新しいことを始めてみたい"
+              >
+              <span>✨ 新しいことを始めてみたい</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="特に思いつかない"
+              >
+              <span>🤭 特に思いつかない</span>
+            </label>
+
+
+            <label class="choice-item">
+              <input
+                type="checkbox"
+                name="wantToDo"
+                value="それ以外"
+              >
+              <span>🌸 それ以外</span>
+            </label>
+
+          </div>
+
+
+          <!-- それ以外 -->
+          <div class="other-box small-other-box">
+
+            <label for="wantToDoOther">
+              ほかにあったら書いてね😊
+            </label>
+
+            <input
+              type="text"
+              id="wantToDoOther"
+              placeholder="例：小さなお店をやってみたい など"
+            >
+
+          </div>
+
+
+          <!-- ひとこと -->
+          <div class="other-box final-future-box">
+
+            <label for="wantToDoDetail">
+              🌟 今いちばん「ちょっとやってみたいな🤭」
+              と思うことがあったら教えてね
+            </label>
+
+            <textarea
+              id="wantToDoDetail"
+              rows="5"
+              placeholder="ひとことでもOKです😊"
+            ></textarea>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 補足 -->
+      <section class="note-section">
+
+        <div class="note-box">
+
+          <p>
+            できるかどうかは、まだ考えなくて大丈夫🌿
+          </p>
+
+          <p>
+            「ちょっと気になる」
+            「一度やってみたい」
+            も立派な未来のヒントです😊
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ボタン -->
+      <section class="navigation-section">
+
+        <a
+          href="step2.html"
+          class="sub-button"
+        >
+          ← STEP2にもどる
+        </a>
+
+        <button
+          type="button"
+          class="main-button"
+          id="nextButton"
+        >
+          次へ進む 🌈
+        </button>
+
+      </section>
+
+
+      <!-- フッター -->
+      <section class="ending-section">
+
+        <div class="ending-box">
+          <p>
+            小さな「やってみたい🤭」の中に、<br>
+            これからの私のヒントが
+            隠れているかもしれないね🌈
+          </p>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script>
+
+    function getCheckedValues(name) {
+
+      const checked =
+        document.querySelectorAll(
+          'input[name="' + name + '"]:checked'
+        );
+
+      return Array.from(checked).map(
+        item => item.value
+      );
+
+    }
+
+
+    const nextButton =
+      document.getElementById("nextButton");
+
+
+    nextButton.addEventListener(
+      "click",
+      function () {
+
+        const step3Data = {
+
+          wantToDo:
+            getCheckedValues("wantToDo"),
+
+          wantToDoOther:
+            document
+              .getElementById("wantToDoOther")
+              .value
+              .trim(),
+
+          wantToDoDetail:
+            document
+              .getElementById("wantToDoDetail")
+              .value
+              .trim()
+
+        };
+
+
+        localStorage.setItem(
+          "mirai_step3",
+          JSON.stringify(step3Data)
+        );
+
+
+        window.location.href =
+          "step4.html";
+
+      }
+    );
+
+
+    /* ===== 保存済み回答を復元 ===== */
+
+    const savedData =
+      localStorage.getItem(
+        "mirai_step3"
+      );
+
+
+    if (savedData) {
+
+      const data =
+        JSON.parse(savedData);
+
+
+      if (Array.isArray(data.wantToDo)) {
+
+        data.wantToDo.forEach(
+          function (value) {
+
+            const checkbox =
+              document.querySelector(
+                'input[name="wantToDo"][value="' +
+                value +
+                '"]'
+              );
+
+
+            if (checkbox) {
+              checkbox.checked = true;
+            }
+
+          }
+        );
+
+      }
+
+
+      document.getElementById(
+        "wantToDoOther"
+      ).value =
+        data.wantToDoOther || "";
+
+
+      document.getElementById(
+        "wantToDoDetail"
+      ).value =
+        data.wantToDoDetail || "";
+
+    }
+
+  </script>
+
+</body>
+</html>
