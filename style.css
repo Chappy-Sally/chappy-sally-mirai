@@ -618,3 +618,31 @@ strong {
     font-size: 15px;
   }
 }
+
+/* ===== STEP2 チェックグループ ===== */
+
+.choice-group {
+  margin-top: 26px;
+}
+
+.choice-group:first-of-type {
+  margin-top: 16px;
+}
+
+.choice-group-title {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #7a5364;
+  margin-bottom: 12px;
+}
+
+.choice-group + .choice-group {
+  padding-top: 20px;
+  border-top: 1px dashed #efdbe4;
+}
+
+@media (max-width: 420px) {
+  .choice-group-title {
+    font-size: 17px;
+  }
+}
