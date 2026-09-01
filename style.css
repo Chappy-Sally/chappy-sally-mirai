@@ -568,3 +568,53 @@ strong {
     font-size: 15px;
   }
 }
+
+/* ===== STEP2 自由入力 ===== */
+
+.future-input-box {
+  margin-top: 20px;
+}
+
+.future-input-box:first-of-type {
+  margin-top: 10px;
+}
+
+.future-input-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7a5364;
+  line-height: 1.6;
+}
+
+.future-input-box textarea {
+  display: block;
+  width: 100%;
+  min-height: 105px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b4b2a;
+  background: #ffffff;
+  border: 1px solid #ead4de;
+  border-radius: 14px;
+  resize: vertical;
+  outline: none;
+}
+
+.future-input-box textarea:focus {
+  border-color: #e5a2bc;
+  box-shadow: 0 0 0 3px rgba(229, 162, 188, 0.14);
+}
+
+@media (max-width: 420px) {
+  .future-input-box label {
+    font-size: 15px;
+  }
+
+  .future-input-box textarea {
+    font-size: 15px;
+  }
+}
