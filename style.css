@@ -646,3 +646,41 @@ strong {
     font-size: 17px;
   }
 }
+
+/* ===== STEP2 それ以外入力欄 ===== */
+
+.small-other-box {
+  margin-top: 12px;
+}
+
+.small-other-box label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: #8a6171;
+}
+
+.small-other-box input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6b4b2a;
+  background: #ffffff;
+  border: 1px solid #ead4de;
+  border-radius: 14px;
+  outline: none;
+}
+
+.small-other-box input[type="text"]:focus {
+  border-color: #e5a2bc;
+  box-shadow: 0 0 0 3px rgba(229, 162, 188, 0.14);
+}
+
+.final-future-box {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px dashed #efdbe4;
+}
