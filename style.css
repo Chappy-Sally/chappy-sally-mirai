@@ -684,3 +684,9 @@ strong {
   padding-top: 22px;
   border-top: 1px dashed #efdbe4;
 }
+
+/* 2026-10-19: 全STEPの入力欄をスマホでも統一 */
+.question-box textarea,.question-box input[type="text"],.question-box input:not([type]),.mirai-field textarea,.other-box textarea,.future-input-box textarea,#result{display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;padding:14px;font-family:inherit;font-size:16px;line-height:1.65;color:#6b4b2a;background:#fff;border:1px solid #ead4de;border-radius:14px;resize:vertical;outline:none}
+.question-box textarea:focus,.question-box input[type="text"]:focus,#result:focus{border-color:#e5a2bc;box-shadow:0 0 0 3px rgba(229,162,188,.14)}
+.mirai-field label{display:block;margin-bottom:8px;font-weight:700}
+@media(max-width:420px){.question-box textarea,.question-box input[type="text"],.mirai-field textarea,#result{font-size:16px}}
