@@ -690,3 +690,8 @@ strong {
 .question-box textarea:focus,.question-box input[type="text"]:focus,#result:focus{border-color:#e5a2bc;box-shadow:0 0 0 3px rgba(229,162,188,.14)}
 .mirai-field label{display:block;margin-bottom:8px;font-weight:700}
 @media(max-width:420px){.question-box textarea,.question-box input[type="text"],.mirai-field textarea,#result{font-size:16px}}
+
+/* 未来ワーク: 見出しをスマホで読みやすく統一 */
+.step-header h1{font-size:clamp(23px,5.8vw,34px);line-height:1.55;letter-spacing:-.025em;overflow-wrap:normal;word-break:normal;line-break:strict}
+.cta-section h2{font-size:clamp(18px,4.4vw,26px);line-height:1.55;letter-spacing:-.035em;overflow-wrap:normal;word-break:normal}
+@media(max-width:420px){.step-header h1{font-size:clamp(23px,6vw,27px)}.step-header .hero-message{font-size:15px;line-height:1.75}.cta-section h2{font-size:clamp(18px,4.5vw,22px)}}
