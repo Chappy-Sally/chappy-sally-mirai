@@ -203,46 +203,10 @@
           はじめる
         </a>
 
-        <a href="#copy-guide" class="sub-button">
-          最後はどうするの？
-        </a>
+        <button type="button" id="clearMiraiData" class="sub-button">🧹 入力データを消す</button>
       </section>
 
-      <!-- 最後の流れ -->
-      <section class="copy-guide-section" id="copy-guide">
-        <h2>最後はこんな流れです</h2>
 
-        <div class="flow-box">
-          <div class="flow-step">
-            <span>①</span>
-            <p>ナビに答える</p>
-          </div>
-
-          <div class="flow-arrow">↓</div>
-
-          <div class="flow-step">
-            <span>②</span>
-            <p>内容をコピーする</p>
-          </div>
-
-          <div class="flow-arrow">↓</div>
-
-          <div class="flow-step">
-            <span>③</span>
-            <p>チャッピーGPTへ送る</p>
-          </div>
-
-          <div class="flow-arrow">↓</div>
-
-          <div class="flow-step">
-            <span>④</span>
-            <p>
-              何度も出てくる言葉や、
-              大切にしたい未来を一緒に整理する
-            </p>
-          </div>
-        </div>
-      </section>
 
       <!-- やさしい締め -->
       <section class="ending-section">
@@ -263,5 +227,18 @@
     </main>
 
   </div>
-</body>
+<script>
+document.getElementById("clearMiraiData").addEventListener("click", function () {
+  const ok = window.confirm("保存したSTEP1〜13の回答をすべて消しますか？\nこの操作は元に戻せません。");
+  if (!ok) return;
+  try {
+    for (let i = 1; i <= 13; i++) {
+      localStorage.removeItem("mirai_step" + i);
+    }
+    window.alert("入力データを消したよ😊\nまた最初から始められるよ🌈");
+  } catch (error) {
+    window.alert("削除できませんでした。ブラウザの設定を確認してね。");
+  }
+});
+</script></body>
 </html>
