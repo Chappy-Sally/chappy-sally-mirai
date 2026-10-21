@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>保存した回答をまとめる｜チャッピー＆サリー</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="app"><main class="content-card"><header class="step-header"><h1>🌈 保存した回答をまとめる</h1><p>ワーク①と②の答えをひとつにして、チャッピーGPTとお話ししよう😊</p></header>
+<section class="question-box"><p>答えたところだけを表示するよ。お手紙💌は別のままだよ。</p><div class="other-box"><label for="result">私の未来ワークのまとめ</label><textarea id="result" style="min-height:340px"></textarea></div><button type="button" id="copy" class="main-button">📋 全部まとめてコピー</button><p id="status" role="status"></p><a class="main-button" href="https://chatgpt.com/g/g-6a521739bdc08191be5387b1993ba520-tiyatuhigpt" target="_blank" rel="noopener noreferrer">🐶 チャッピーGPTへ行く 💕</a><p>コピーした文章をチャッピーGPTに貼り付けてね😊</p><a class="sub-button" href="work.html">← ワークを選ぶ</a><a class="sub-button" href="index.html">表紙にもどる</a></section></main></div>
+<script>
+const labels=["大切にしたい気持ち","未来の毎日","やってみたいこと","叶えたいこと","心配が少なくなったら","どんな私でいたい","残したいもの","残り1年なら","今日が最後なら","友だちからの印象","大切な言葉","これからの毎日"];
+const lines=["【未来の私に会いに行くワーク🌈】"];let first=[],second=[];
+for(let i=1;i<=12;i++){let d={};try{d=JSON.parse(localStorage.getItem("mirai_step"+i)||"{}")}catch(e){}const values=Object.values(d).filter(v=>Array.isArray(v)?v.length:typeof v==="string"&&v.trim()).map(v=>Array.isArray(v)?v.join("、"):v);if(values.length)(i<=6?first:second).push("STEP"+i+" "+labels[i-1]+"\n"+values.join("\n"))}
+let extra={};try{extra=JSON.parse(localStorage.getItem("mirai_future_extra")||"{}")}catch(e){}
+if(extra.wish?.trim())second.push("願いが叶ったらどんな気持ち？\n"+extra.wish.trim());
+if(extra.thanks?.trim())second.push("未来の私から今の私へのありがとう\n"+extra.thanks.trim());
+if(first.length)lines.push("【🌱 今の私の本音を見つけるワーク】\n"+first.join("\n\n"));
+if(second.length)lines.push("【🌈 これからの私を描くワーク】\n"+second.join("\n\n"));
+if(!first.length&&!second.length)lines.push("まだ保存された回答がないよ😊 ワークを選んで答えてみてね。");
+else lines.push("【チャッピーGPTへのお願い】\nここまでの回答から、今の私が大切にしたい気持ちや本当の望みをやさしく整理してください。決めつけず、気づいたことを一緒に話しながら未来の私を見つけていきたいです。質問は一度に1〜2個でお願いします。");
+const result=document.getElementById("result");result.value=lines.join("\n\n");const btn=document.getElementById("copy");if(!first.length&&!second.length){btn.disabled=true}
+btn.onclick=async()=>{try{await navigator.clipboard.writeText(result.value);document.getElementById("status").textContent="全部まとめてコピーできたよ😊"}catch(e){result.focus();result.select();document.getElementById("status").textContent="文章を選択したよ。長押しでコピーしてね😊"}};
+</script></body></html>
