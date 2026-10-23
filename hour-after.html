@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>叶った1時間後の私に会いに行く🌈｜チャッピー＆サリー</title>
+  <meta name="description" content="願いが叶った瞬間から1時間後の私を想像して、本当にほしい感覚を見つけるやさしい未来ワークです。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hour-intro{background:linear-gradient(180deg,#fff9fd 0%,#fffdf7 100%);border:1px solid #f2dfe8;border-radius:22px;padding:20px 16px;margin-bottom:20px}
+    .hour-intro p:last-child{margin-bottom:0}
+    .hour-fields{display:grid;gap:18px}
+    .hour-card{background:#fffdfb;border:1px solid #f2dfe8;border-radius:20px;padding:18px 16px}
+    .hour-card h2{font-size:20px;margin-bottom:8px}
+    .hour-card p{color:#806673;margin-bottom:12px}
+    .hour-card textarea{display:block;width:100%;min-height:105px;padding:14px;font-family:inherit;font-size:16px;line-height:1.65;color:#6b4b2a;background:#fff;border:1px solid #ead4de;border-radius:14px;resize:vertical;outline:none}
+    .hour-card textarea:focus{border-color:#e5a2bc;box-shadow:0 0 0 3px rgba(229,162,188,.14)}
+    .summary-card{display:none;margin-top:24px;background:linear-gradient(180deg,#fff7fb,#fffdf8);border:1px solid #f0d8e3;border-radius:22px;padding:20px 16px}
+    .summary-card.show{display:block}
+    .summary-text{white-space:pre-wrap;background:#fff;border:1px solid #f2dfe8;border-radius:16px;padding:16px;line-height:1.8;text-align:left}
+    .small-status{text-align:center;color:#9a6c7c;min-height:1.5em;margin-top:8px}
+    @media(max-width:420px){.hour-card h2{font-size:18px}.hour-card textarea{font-size:16px}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <main class="content-card">
+      <header class="step-header">
+        <p class="mini-label">🐶 チャッピー＆サリーのやさしい未来ワーク</p>
+        <h1>🌈 叶った1時間後の私に<br>会いに行く</h1>
+        <p class="hero-message">叶った瞬間だけじゃなく、<br>そのあとの「いつもの私」ものぞいてみよう🤭</p>
+      </header>
+
+      <section class="hour-intro">
+        <p><strong>上手に想像しなくて大丈夫😊</strong></p>
+        <p>「こうだったらいいな〜」くらいでOK。<br>途中で願いが変わっても、答えたくないところは空欄でも大丈夫だよ🌿</p>
+      </section>
+
+      <section class="hour-fields">
+        <div class="hour-card">
+          <h2>① 何が叶った？ ✨</h2>
+          <p>まずは、叶ったことをひとつだけ。</p>
+          <textarea id="wish" placeholder="例：自由に使えるお金が十分に入ってきた"></textarea>
+        </div>
+
+        <div class="hour-card">
+          <h2>② 叶った瞬間、どうした？ 😳</h2>
+          <p>最初のひと言、表情、誰かに伝える？ 何を確認する？</p>
+          <textarea id="moment" placeholder="例：えっ！うっそ〜😳 やったぁ〜！って何度も確認した"></textarea>
+        </div>
+
+        <div class="hour-card">
+          <h2>③ その1時間後、何してる？ 🌈</h2>
+          <p>場所、飲み物、会話、行動。できるだけ日常っぽく想像してみよう。</p>
+          <textarea id="after" placeholder="例：支払いを済ませて、ホッとしてお茶を飲みながらニヤニヤしてる🤭"></textarea>
+        </div>
+
+        <div class="hour-card">
+          <h2>④ その時、どんな気持ち？ 💗</h2>
+          <p>安心、自由、うれしい、力が抜ける…いちばん近い感覚は？</p>
+          <textarea id="feeling" placeholder="例：あぁ〜よかった。もう心配しなくていいんだって安心してる"></textarea>
+        </div>
+
+        <div class="hour-card">
+          <h2>⑤ 今の私が選びたいことは？ 🌱</h2>
+          <p>大きな行動じゃなくてOK。今の私が「やりたい」と思うことをひとつ。</p>
+          <textarea id="now" placeholder="例：今日は安心してゆっくり過ごす"></textarea>
+        </div>
+      </section>
+
+      <section class="navigation-section">
+        <button type="button" class="main-button" id="makeSummary">🌈 1時間後の私をまとめる</button>
+        <a href="index.html" class="sub-button">← 表紙にもどる</a>
+      </section>
+
+      <section id="summaryCard" class="summary-card">
+        <h2>🌈 叶った1時間後の私</h2>
+        <div id="summaryText" class="summary-text"></div>
+        <button type="button" class="main-button" id="copySummary">📋 この内容をコピーする</button>
+        <p id="copyStatus" class="small-status" role="status"></p>
+        <p style="text-align:center;margin-bottom:0">この未来を「叶えなきゃ」と握りしめなくて大丈夫。<br><strong>「こんな感じ、いいなぁ🤭」</strong>で楽しんでね💕</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const key="mirai_hour_after";
+    const ids=["wish","moment","after","feeling","now"];
+
+    function loadData(){
+      try{
+        const d=JSON.parse(localStorage.getItem(key)||"{}");
+        ids.forEach(id=>document.getElementById(id).value=d[id]||"");
+      }catch(e){}
+    }
+
+    function saveData(){
+      const d={};
+      ids.forEach(id=>d[id]=document.getElementById(id).value.trim());
+      localStorage.setItem(key,JSON.stringify(d));
+      return d;
+    }
+
+    function buildSummary(d){
+      const lines=[];
+      if(d.wish) lines.push("✨ 叶ったこと\n"+d.wish);
+      if(d.moment) lines.push("😳 叶った瞬間の私\n"+d.moment);
+      if(d.after) lines.push("🌈 叶った1時間後の私\n"+d.after);
+      if(d.feeling) lines.push("💗 その時の気持ち\n"+d.feeling);
+      if(d.now) lines.push("🌱 今の私が選びたいこと\n"+d.now);
+      return lines.length?lines.join("\n\n"):"まだ何も書かれていないよ😊\n思いつくところだけ書いてみてね。";
+    }
+
+    document.getElementById("makeSummary").addEventListener("click",()=>{
+      const d=saveData();
+      document.getElementById("summaryText").textContent=buildSummary(d);
+      document.getElementById("summaryCard").classList.add("show");
+      document.getElementById("summaryCard").scrollIntoView({behavior:"smooth",block:"start"});
+    });
+
+    document.getElementById("copySummary").addEventListener("click",async()=>{
+      const text=document.getElementById("summaryText").textContent;
+      try{
+        await navigator.clipboard.writeText(text);
+        document.getElementById("copyStatus").textContent="コピーしたよ😊";
+      }catch(e){
+        document.getElementById("copyStatus").textContent="長押ししてコピーしてね😊";
+      }
+    });
+
+    ids.forEach(id=>document.getElementById(id).addEventListener("input",saveData));
+    loadData();
+  </script>
+</body>
+</html>
