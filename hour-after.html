@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>叶った1時間後の私に会いに行く🌈｜チャッピー＆サリー</title>
-  <meta name="description" content="願いが叶った瞬間から1時間後の私を想像して、本当にほしい感覚を見つけるやさしい未来ワークです。">
+  <meta name="description" content="願いが叶った瞬間から1時間後の私へワープ。いくつかの質問をきっかけに、自由に思いっきり妄想する未来ワークです。">
   <link rel="stylesheet" href="style.css">
   <style>
     .hour-intro{background:linear-gradient(180deg,#fff9fd 0%,#fffdf7 100%);border:1px solid #f2dfe8;border-radius:22px;padding:20px 16px;margin-bottom:20px}
@@ -15,11 +15,17 @@
     .hour-card p{color:#806673;margin-bottom:12px}
     .hour-card textarea{display:block;width:100%;min-height:105px;padding:14px;font-family:inherit;font-size:16px;line-height:1.65;color:#6b4b2a;background:#fff;border:1px solid #ead4de;border-radius:14px;resize:vertical;outline:none}
     .hour-card textarea:focus{border-color:#e5a2bc;box-shadow:0 0 0 3px rgba(229,162,188,.14)}
-    .summary-card{display:none;margin-top:24px;background:linear-gradient(180deg,#fff7fb,#fffdf8);border:1px solid #f0d8e3;border-radius:22px;padding:20px 16px}
-    .summary-card.show{display:block}
-    .summary-text{white-space:pre-wrap;background:#fff;border:1px solid #f2dfe8;border-radius:16px;padding:16px;line-height:1.8;text-align:left}
-    .small-status{text-align:center;color:#9a6c7c;min-height:1.5em;margin-top:8px}
-    @media(max-width:420px){.hour-card h2{font-size:18px}.hour-card textarea{font-size:16px}}
+    .dream-card{display:none;margin-top:24px;background:linear-gradient(180deg,#fff3fb 0%,#fffaf0 52%,#f4fbff 100%);border:1px solid #efd6e5;border-radius:26px;padding:24px 18px;text-align:center;box-shadow:0 8px 24px rgba(220,170,195,.18)}
+    .dream-card.show{display:block}
+    .dream-title{font-size:clamp(24px,6vw,34px);line-height:1.45;color:#8e5870;margin-bottom:10px}
+    .dream-lead{font-size:17px;line-height:1.9;color:#6f5965}
+    .dream-seed{margin:20px 0;padding:18px 16px;background:rgba(255,255,255,.82);border:1px solid #f0dbe5;border-radius:20px;text-align:left;line-height:1.85}
+    .dream-seed p{margin:0 0 12px}
+    .dream-seed p:last-child{margin-bottom:0}
+    .dream-prompts{display:grid;gap:10px;margin:20px 0}
+    .dream-prompt{background:#fff;border-radius:16px;padding:13px 14px;box-shadow:0 4px 12px rgba(126,88,108,.07);line-height:1.6}
+    .dream-ending{font-size:18px;line-height:1.9;margin:22px 0 8px}
+    @media(max-width:420px){.hour-card h2{font-size:18px}.hour-card textarea{font-size:16px}.dream-lead{font-size:15px}.dream-ending{font-size:16px}}
   </style>
 </head>
 <body>
@@ -28,64 +34,76 @@
       <header class="step-header">
         <p class="mini-label">🐶 チャッピー＆サリーのやさしい未来ワーク</p>
         <h1>🌈 叶った1時間後の私に<br>会いに行く</h1>
-        <p class="hero-message">叶った瞬間だけじゃなく、<br>そのあとの「いつもの私」ものぞいてみよう🤭</p>
+        <p class="hero-message">願いが叶ったその瞬間から、<br>1時間後の私へワープ🌀✨</p>
       </header>
 
       <section class="hour-intro">
-        <p><strong>上手に想像しなくて大丈夫😊</strong></p>
-        <p>「こうだったらいいな〜」くらいでOK。<br>途中で願いが変わっても、答えたくないところは空欄でも大丈夫だよ🌿</p>
+        <p><strong>ここでは考えすぎなくて大丈夫😊</strong></p>
+        <p>正解も上手な想像もいりません。<br>いくつかの質問をきっかけにしたら、あとはただただ自由に、思いっきり妄想してみよう🤭🌈</p>
       </section>
 
       <section class="hour-fields">
         <div class="hour-card">
           <h2>① 何が叶った？ ✨</h2>
-          <p>まずは、叶ったことをひとつだけ。</p>
+          <p>まずは「叶った！」と思いたいことをひとつ。</p>
           <textarea id="wish" placeholder="例：自由に使えるお金が十分に入ってきた"></textarea>
         </div>
 
         <div class="hour-card">
           <h2>② 叶った瞬間、どうした？ 😳</h2>
-          <p>最初のひと言、表情、誰かに伝える？ 何を確認する？</p>
+          <p>最初のひと言は？ どんな顔してる？ 誰かに伝える？</p>
           <textarea id="moment" placeholder="例：えっ！うっそ〜😳 やったぁ〜！って何度も確認した"></textarea>
         </div>
 
         <div class="hour-card">
           <h2>③ その1時間後、何してる？ 🌈</h2>
-          <p>場所、飲み物、会話、行動。できるだけ日常っぽく想像してみよう。</p>
-          <textarea id="after" placeholder="例：支払いを済ませて、ホッとしてお茶を飲みながらニヤニヤしてる🤭"></textarea>
+          <p>どこにいる？ 誰といる？ 何を飲んだり食べたりしてる？</p>
+          <textarea id="after" placeholder="例：ホッとしてお茶を飲みながら、ニヤニヤしてる🤭"></textarea>
         </div>
 
         <div class="hour-card">
-          <h2>④ その時、どんな気持ち？ 💗</h2>
-          <p>安心、自由、うれしい、力が抜ける…いちばん近い感覚は？</p>
-          <textarea id="feeling" placeholder="例：あぁ〜よかった。もう心配しなくていいんだって安心してる"></textarea>
-        </div>
-
-        <div class="hour-card">
-          <h2>⑤ 今の私が選びたいことは？ 🌱</h2>
-          <p>大きな行動じゃなくてOK。今の私が「やりたい」と思うことをひとつ。</p>
+          <h2>④ 今の私が選びたいことは？ 🌱</h2>
+          <p>大きな行動じゃなくてOK。「今これしたいな」をひとつ。</p>
           <textarea id="now" placeholder="例：今日は安心してゆっくり過ごす"></textarea>
         </div>
       </section>
 
       <section class="navigation-section">
-        <button type="button" class="main-button" id="makeSummary">🌈 1時間後の私をまとめる</button>
+        <button type="button" class="main-button" id="dreamBtn">🌀 思いっきり妄想する</button>
         <a href="index.html" class="sub-button">← 表紙にもどる</a>
       </section>
 
-      <section id="summaryCard" class="summary-card">
-        <h2>🌈 叶った1時間後の私</h2>
-        <div id="summaryText" class="summary-text"></div>
-        <button type="button" class="main-button" id="copySummary">📋 この内容をコピーする</button>
-        <p id="copyStatus" class="small-status" role="status"></p>
-        <p style="text-align:center;margin-bottom:0">この未来を「叶えなきゃ」と握りしめなくて大丈夫。<br><strong>「こんな感じ、いいなぁ🤭」</strong>で楽しんでね💕</p>
+      <section id="dreamCard" class="dream-card">
+        <div class="dream-title">🌀 1時間後の私へワープ 🌈</div>
+        <p class="dream-lead">ここから先は、答えを書かなくていいよ。<br>目を閉じても、そのまま画面を見ながらでもOK🤭</p>
+
+        <div id="dreamSeed" class="dream-seed"></div>
+
+        <div class="dream-prompts">
+          <div class="dream-prompt">🏠 そのあと、どこで過ごしてる？</div>
+          <div class="dream-prompt">👨‍👩‍👧‍👦 誰と何を話してる？</div>
+          <div class="dream-prompt">☕ 何を食べたり飲んだりしてる？</div>
+          <div class="dream-prompt">💴 何に使おうかな〜ってニヤニヤしてる？</div>
+          <div class="dream-prompt">🌙 その日の夜は、どんな気分で眠る？</div>
+          <div class="dream-prompt">☀️ 次の日の朝、最初に何を思う？</div>
+        </div>
+
+        <p class="dream-ending">
+          もっと先まで行ってもいいし、<br>
+          途中で全然違う展開になってもOK🤣💕<br><br>
+          <strong>「うわぁ〜😆 そうなったら楽しそう！」</strong><br>
+          そのくらいで大成功🌈
+        </p>
+
+        <button type="button" class="main-button" id="dreamAgain">🤣 もう少し妄想する</button>
+        <a href="index.html" class="sub-button">😊 今日はここまで</a>
       </section>
     </main>
   </div>
 
   <script>
     const key="mirai_hour_after";
-    const ids=["wish","moment","after","feeling","now"];
+    const ids=["wish","moment","after","now"];
 
     function loadData(){
       try{
@@ -101,31 +119,30 @@
       return d;
     }
 
-    function buildSummary(d){
-      const lines=[];
-      if(d.wish) lines.push("✨ 叶ったこと\n"+d.wish);
-      if(d.moment) lines.push("😳 叶った瞬間の私\n"+d.moment);
-      if(d.after) lines.push("🌈 叶った1時間後の私\n"+d.after);
-      if(d.feeling) lines.push("💗 その時の気持ち\n"+d.feeling);
-      if(d.now) lines.push("🌱 今の私が選びたいこと\n"+d.now);
-      return lines.length?lines.join("\n\n"):"まだ何も書かれていないよ😊\n思いつくところだけ書いてみてね。";
+    function makeDreamSeed(d){
+      const parts=[];
+      if(d.wish) parts.push("<p>✨ <strong>叶ったのは…</strong><br>"+escapeHtml(d.wish)+"</p>");
+      if(d.moment) parts.push("<p>😳 <strong>その瞬間の私は…</strong><br>"+escapeHtml(d.moment)+"</p>");
+      if(d.after) parts.push("<p>🌈 <strong>そして1時間後…</strong><br>"+escapeHtml(d.after)+"</p>");
+      if(d.now) parts.push("<p>🌱 <strong>今の私は…</strong><br>"+escapeHtml(d.now)+"</p>");
+      if(!parts.length) return "<p>何も決めなくても大丈夫。<br>『何かすっごく嬉しいことが叶った！』から始めてみよう🤣🌈</p>";
+      return parts.join("");
     }
 
-    document.getElementById("makeSummary").addEventListener("click",()=>{
-      const d=saveData();
-      document.getElementById("summaryText").textContent=buildSummary(d);
-      document.getElementById("summaryCard").classList.add("show");
-      document.getElementById("summaryCard").scrollIntoView({behavior:"smooth",block:"start"});
-    });
+    function escapeHtml(str){
+      return str.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+    }
 
-    document.getElementById("copySummary").addEventListener("click",async()=>{
-      const text=document.getElementById("summaryText").textContent;
-      try{
-        await navigator.clipboard.writeText(text);
-        document.getElementById("copyStatus").textContent="コピーしたよ😊";
-      }catch(e){
-        document.getElementById("copyStatus").textContent="長押ししてコピーしてね😊";
-      }
+    function openDream(){
+      const d=saveData();
+      document.getElementById("dreamSeed").innerHTML=makeDreamSeed(d);
+      document.getElementById("dreamCard").classList.add("show");
+      document.getElementById("dreamCard").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+
+    document.getElementById("dreamBtn").addEventListener("click",openDream);
+    document.getElementById("dreamAgain").addEventListener("click",()=>{
+      document.querySelector(".dream-prompts").scrollIntoView({behavior:"smooth",block:"center"});
     });
 
     ids.forEach(id=>document.getElementById(id).addEventListener("input",saveData));
